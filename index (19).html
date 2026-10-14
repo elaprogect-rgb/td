@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tower Defense</title>
+<!-- Launcher only: every asset (CSS, JS, icons) comes from the GitHub repo via jsDelivr. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/elaprogect-rgb/td@main/style.css">
+</head>
+<body>
+<div id="app"><p class="boot">Loading game from GitHub…</p></div>
+<script src="https://cdn.jsdelivr.net/gh/elaprogect-rgb/td@main/game.js"
+        onerror="document.getElementById('app').innerHTML='<p class=boot>Could not load game.js from the CDN. Check that style.css and game.js are pushed to the main branch of elaprogect-rgb/td.</p>'"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* Palette: ink #14161c, steel #232733, bone #e8e4d8, ember #ff6a2b, gold #f2b632, ash #8b5cf6 */
+*{box-sizing:border-box}
+body{margin:0;background:#14161c;color:#e8e4d8;font:15px/1.4 Georgia,'Times New Roman',serif;min-height:100vh}
+button{font:inherit;cursor:pointer;background:#2d3242;color:inherit;border:1px solid #444b60;border-radius:6px;padding:6px 12px}
+button:hover:not(:disabled){background:#3b4258}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,.card:focus-visible,.slot:focus-visible{outline:2px solid #f2b632;outline-offset:2px}
+h1{font-size:2.4rem;margin:.3em 0;letter-spacing:.02em}
+h2{font-size:1.1rem;margin:1.2em 0 .5em;color:#f2b632;font-weight:normal}
+small{display:block;opacity:.7;font-size:.78rem}
+.boot{padding:3rem;text-align:center}
+
+/* Lobby */
+.lobby{max-width:900px;margin:0 auto;padding:16px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.card{flex:1 1 200px;background:#232733;border:2px solid #333a4d;border-radius:10px;padding:12px;cursor:pointer;text-align:center}
+.card img{height:110px;max-width:100%;object-fit:contain}
+.card.on{border-color:var(--c,#f2b632);box-shadow:0 0 0 2px var(--c,#f2b632) inset}
+.card b{display:block;font-size:1.2rem}
+.slot{width:84px;height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#232733;border:2px dashed #444b60;border-radius:10px;font-size:1.5rem;cursor:pointer}
+.slot.on{border:2px solid #f2b632;background:#3a3424}
+.slot.lock{opacity:.4;cursor:default}
+.go{margin-top:20px;font-size:1.3rem;padding:12px 32px;background:#ff6a2b;color:#14161c;border:0;font-weight:bold}
+.go:hover:not(:disabled){background:#ff8450}
+
+/* Game */
+.game{max-width:820px;margin:0 auto;padding:8px;position:relative}
+.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:6px 0}
+.top span{background:#232733;padding:4px 10px;border-radius:6px}
+canvas{width:100%;display:block;border:2px solid #333a4d;border-radius:6px;touch-action:manipulation}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.bar button{width:74px;font-size:1.2rem;font-weight:bold}
+.bar button.on{background:#f2b632;color:#14161c}
+.bar .hint{flex:1 1 220px;font-size:.8rem;opacity:.75}
+.panel{margin-top:8px;background:#232733;border-radius:8px;padding:10px;min-height:68px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.panel>b{flex-basis:100%}
+.msg{position:absolute;inset:0;background:rgba(10,11,15,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;z-index:5}
+.msg[hidden]{display:none}
+.msg h2{font-size:2.4rem;color:#e8e4d8;margin:0}
